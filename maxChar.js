@@ -16,3 +16,9 @@ function maxChar(str) {
 }
 
 maxChar("87264iuashdfjhasdf hhhhhhsdjfhdjfhjdhfjdfhhhjdfhdjfh");
+
+/* 
+for (let chars of str) { 
+    // iterates through each item in str 
+}
+*/
