@@ -116,3 +116,60 @@ function neighbourExists(node) {
 }
 
 dfs('SF');
+
+function bfs(startNode) {
+    // console.log(startNode);
+    let visited = {};
+
+    // Declare all visited as false
+    for(let i = 0; i < map.node.length; i++) {
+        visited[map.node[i]] = false;
+    }
+
+    // push and shift methods
+    let stack = []; 
+    let op = [];
+
+    // Push the start node to the stack
+    stack.push(startNode);
+    op.push(startNode);
+
+    visited[startNode] = true;
+
+    // Check if neighbours exists
+    let neighbourExists_check = neighbourExists(startNode); 
+
+    var allNeighbour = 0;
+    // let run = 0; 
+    if(neighbourExists_check) {
+        while(stack.length !== 0) {
+            console.log(`first if ${map.adjacencyList[startNode][allNeighbour]}`);
+            if(map.adjacencyList[startNode][allNeighbour]) {
+                console.log(`second if ${visited[map.adjacencyList[startNode][allNeighbour].node]}`)
+                if(!visited[map.adjacencyList[startNode][allNeighbour].node]) {
+                    console.log(`pushing into stack ${map.adjacencyList[startNode][allNeighbour].node}`);
+                    stack.push(map.adjacencyList[startNode][allNeighbour].node);
+                    op.push(map.adjacencyList[startNode][allNeighbour].node);
+                    visited[map.adjacencyList[startNode][allNeighbour].node] = true;
+                    allNeighbour++;
+                } else {
+                    allNeighbour++;
+                }
+            } else {
+                stack.shift();
+                startNode = stack[0];
+                console.log(`stack ${startNode}`);
+                allNeighbour = 0;
+            }
+        }
+    } else {
+        console.log(startNode);
+    }
+
+    console.log(visited);
+    console.log(stack);
+    console.log("Output:" + op);
+    
+}
+
+bfs('SF');
