@@ -1,3 +1,5 @@
+// check sol file
+
 class BinaryTree {
   constructor(value) {
     this.value = value;
