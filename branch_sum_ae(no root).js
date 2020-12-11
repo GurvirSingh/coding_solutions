@@ -1,4 +1,5 @@
 // check sol file
+// run tests (no output yet 
 
 class BinaryTree {
   constructor(value) {
