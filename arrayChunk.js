@@ -15,10 +15,11 @@ function arrayChunk(arr, size) {
         count = count + inc;
         size  = size + inc;
 
-        console.log(newArr);
+        return newArrj;
     }
 }
 
 var arr = [1,2,3,4,5,6,7]
 size = 12
-arrayChunk(arr, size);
+const ans = arrayChunk(arr, size);
+console.log(ans);
