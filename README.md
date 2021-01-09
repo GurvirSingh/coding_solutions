@@ -1,4 +1,4 @@
-# My Coding Solutions 
+# coding_solutions
 
-<h2>Random coding questions solved.</h2>
-Quesitons taken from Leetcode, Cracking the coding interview Book and Algoexpert.
+Random coding questions solved.
+Quesitons taken from Leetcode, Cracking thc coding interview Book.
