@@ -1,2 +1,0 @@
-function moveElementToEnd(array, toMove) {
-}
