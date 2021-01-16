@@ -1,11 +1,11 @@
 class Graph {
     constructor() {
-        this.node = [];
+        this.nodes = [];
         this.adjacencyList = {};
     }
 
     addNode(node) {
-        this.node.push(node);
+        this.nodes.push(node);
         this.adjacencyList[node] = [];
     }
 

@@ -15,9 +15,6 @@ class graph {
     }
 }
 
-class employee extends person {
-}
-
 let map = new graph();
 map.addNode("SF");
 map.addNode("NYC");
