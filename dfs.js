@@ -1,11 +1,12 @@
-class Node {
+// S-O(V) T-O(V+E)
+class Graph { 
     constructor(name) {
         this.name = name;
         this.children = [];
     }
-
+ 
     addChild(name) {
-        this.children.push(new Node(name));
+        this.children.push(new Graph(name));
         return this;
     }
 
@@ -17,7 +18,8 @@ class Node {
         return array;
     }
 }
-const graph = new Node('A');
+
+const graph = new Graph('A');
   graph.addChild('B').addChild('C').addChild('D');
   graph.children[0].addChild('E').addChild('F');
   graph.children[2].addChild('G').addChild('H');
