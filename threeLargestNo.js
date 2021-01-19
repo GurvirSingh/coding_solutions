@@ -1,3 +1,4 @@
+//T-O(n), S-O(1)
 const threeLargesNo = (array) => {
     const triplets = [-Infinity, -Infinity, -Infinity];
 
