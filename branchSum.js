@@ -48,7 +48,6 @@ class BinaryTree {
       getSums(node.right, calcSum, sums);
   }
   
-
   const tree = new BinaryTree(1).insert([2, 3, 4, 5, 6, 7, 8, 9, 10]);
   console.log(tree);
   console.log(branchSums(tree));

@@ -1,4 +1,11 @@
 //T-O(n), S-O(d)
+class BST {
+	constructor(value) {
+		this.value = value;
+		this.left = null;
+		this.right = null;
+	}
+}
 
 function inOrderTraverse(tree, array) {
   if(tree !== null) {
@@ -26,3 +33,15 @@ function postOrderTraverse(tree, array) {
 	}
 	return array;
 }
+
+const root = new BST(10);
+  root.left = new BST(5);
+  root.left.left = new BST(2);
+  root.left.left.left = new BST(1);
+  root.left.right = new BST(5);
+  root.right = new BST(15);
+  root.right.right = new BST(22);
+
+  console.log(inOrderTraverse(root, []));
+  console.log(preOrderTraverse(root, []));
+  console.log(postOrderTraverse(root, []));
